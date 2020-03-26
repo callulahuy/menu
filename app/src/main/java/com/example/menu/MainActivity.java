@@ -47,10 +47,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.thongtin){
-            Intent intent = new Intent(MainActivity.this,TtActivity.class);
+        if(id == R.id.dangki){
+            Intent intent = new Intent(MainActivity.this,DangkyActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.dangnhap){
+            Intent intent = new Intent(MainActivity.this,DangnhapActivity.class);
             startActivity(intent);
         }
+
         return false;
     }
 }
